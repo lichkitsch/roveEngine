@@ -1,0 +1,178 @@
+{
+  "Actor": {
+    "types": ["character"],
+    "templates": {
+      "base": {
+        "levels": {
+          "1st": {
+            "label": "1st level",
+            "dmg": "1d4"
+          },
+          "2nd": {
+            "label": "2nd level",
+            "dmg": "1d6"
+          },
+          "3rd": {
+            "label": "3rd level",
+            "dmg": "1d8"
+          },
+          "4th": {
+            "label": "4th level",
+            "dmg": "1d10"
+          },
+          "5th": {
+            "label": "5th level",
+            "dmg": "2d6"
+          },
+          "6th": {
+            "label": "6th level",
+            "dmg": "2d8"
+          },
+          "7th": {
+            "label": "7th level",
+            "dmg": "2d10"
+          },
+          "8th": {
+            "label": "8th level",
+            "dmg": "2d12"
+          },
+          "9th": {
+            "label": "9th level",
+            "dmg": "3d10"
+          },
+          "10th": {
+            "label": "10th level",
+            "dmg": "3d12"
+          },
+          "11th": {
+            "label": "11th level",
+            "dmg": "4d10"
+          },
+          "12th": {
+            "label": "12th level",
+            "dmg": "4d12"
+          }
+        },
+        "level": {
+          "value": "1st"
+        },
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "traits": {
+          "str": {
+            "label": "Strength",
+            "score": 0
+          },
+          "dex": {
+            "label": "Dexterity",
+            "score": 0
+          },
+          "con": {
+            "label": "Constitution",
+            "score": 0
+          },
+          "int": {
+            "label": "Intelligence",
+            "score": 0
+          },
+          "wis": {
+            "label": "Wisdom",
+            "score": 0
+          },
+          "cha": {
+            "label": "Charisma",
+            "score": 0
+          }
+        },
+        "biography": "",
+        "damage": "1d4"
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "form": "Human",
+      "role": "Wanderer"
+    }
+  },
+  "Item": {
+    "types": ["item", "tool", "weapon", "armor", "trinket", "ability"],
+    "templates": {
+      "base": {
+        "description": "",
+        "rank": "f",
+        "ranks": {
+          "f": {
+            "bonus": 1,
+            "die": "d4",
+            "cost": "4d4"
+          },
+          "d": {
+            "bonus": 2,
+            "die": "d6",
+            "cost": "6d6"
+          },
+          "c": {
+            "bonus": 3,
+            "die": "d8",
+            "cost": "8d8"
+          },
+          "b": {
+            "bonus": 4,
+            "die": "d10",
+            "cost": "10d10"
+          },
+          "a": {
+            "bonus": 5,
+            "die": "d12",
+            "cost": "12d12"
+          },
+          "s": {
+            "bonus": 6,
+            "die": "d20",
+            "cost": "20d20"
+          }
+        },
+        "dmgTypes": [
+          "slashing",
+          "piercing",
+          "crushing",
+          "fire",
+          "cold",
+          "shock",
+          "poison",
+          "necrotic",
+          "radiant",
+          "psychic"
+        ]
+      }
+    },
+    "item": {
+      "templates": ["base"],
+      "formula": "1d4 + 1"
+    },
+    "tool": {
+      "templates": ["base"],
+      "formula": "d20 + @str.score + 1"
+    },
+    "weapon": {
+      "templates": ["base"],
+      "formula": "@damage + 1",
+      "dmgType": 0
+    },
+    "armor": {
+      "templates": ["base"],
+      "defense": -1,
+      "dmgType": 0
+    },
+    "trinket": {
+      "templates": ["base"]
+    },
+    "ability": {
+      "templates": ["base"],
+      "formula": "d20 + @str.score + d4"
+    }
+  }
+}
