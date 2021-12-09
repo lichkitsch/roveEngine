@@ -20,7 +20,7 @@
   "gridDistance": 5,
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
-  "url": "",
+  "url": "https://github.com/lichkitsch/roveEngine",
   "manifest": "https://github.com/lichkitsch/roveEngine/blob/master/system.json",
   "download": "",
   "license": "LICENSE.txt"
